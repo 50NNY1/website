@@ -133,10 +133,33 @@
       // Arrays of button names and corresponding bullet lists
       const buttonNames = ["Crimson Chaos", "Wounder", "Film"];
       const bulletLists = [
-        ["crimson1", "crimson2", "crimson3"],
-        ["wounder1", "wounder2", "wounder3"],
-        ["film1", "film2", "film3"],
+        [
+          "Mary Mousetrap - Windowpane (2023)",
+          "Velvet Retreat (2022)",
+          "A Clipping Isle (2022)",
+          "Today Was Such A Horrible Day And I Never Want To Live It Again (2022)",
+          "Frail (2021)",
+          "There Was Nothing (2021)",
+          "Red in Focus/Loyal Archer (2020)",
+          "Gold/Hopeless (2020)",
+          "Goodnight Kisses/As Long as You're Asleep (2020)",
+          "Hollow Presence/4j (2019)",
+          "cc00 (2019)",
+        ],
+        ["Flight of the Mucus Seed (2023)"],
+        [
+          "Train of Thought (2024)",
+          "Wander/Wonder (2023)",
+          "The Onslaught Of The Everyday (2023)",
+          "sol741 (2023)",
+        ],
       ];
+      const centeredTexts = new Map([
+        ["Crimson Chaos", "This is the Crimson Chaos text."],
+        ["Wounder", "This is the Wounder text."],
+        ["Film", "This is the Film text."],
+        ["Sonny Holland", "This is the Sonny Holland text."],
+      ]);
 
       // Function to create buttons and handle click event
       function createButtonsAndLists() {
@@ -179,7 +202,7 @@
       // Function to toggle visibility of centered text
       function toggleCenteredText(buttonName) {
         const centeredText = document.getElementById("centered-text");
-        centeredText.textContent = `This is the ${buttonName} text.`;
+        centeredText.textContent = centeredTexts.get(buttonName);
         centeredText.style.display = "block";
       }
 
